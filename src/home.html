@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/783b33a356.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body:not(i) {
+        font-family: "Outfit", serif;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-800">
+    <section class="max-w-md mx-auto min-h-screen bg-slate-200">
+      <!-- nav wrapper -->
+      <div class="border-b-1 border-stone-300">
+        <nav class="flex justify-between items-center py-6 px-5">
+          <!-- balance status -->
+          <div class="flex justify-between items-center space-x-2">
+            <img src="../assets/Group.png" alt="" />
+            <div>
+              <h2 class="text-xl font-bold">
+                $ <span id="main-balance">8500</span>
+              </h2>
+              <p class="text-stone-600 text-sm">Available Balance</p>
+            </div>
+          </div>
+          <!-- logout -->
+          <div>
+            <button
+              id="logout"
+              class="btn text-lg align-middle active:bg-black active:text-white hover:bg-transparent"
+            >
+              <i
+                class="text-xl fa-solid fa-arrow-right-to-bracket fa-rotate-180 mr-3"
+              ></i>
+              logout
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- financial section  -->
+      <div class="py-7 px-5 space-y-8">
+        <!-- description -->
+        <div>
+          <h1 class="text-2xl mb-2 font-bold">&#128293; Welcome to Payooo!</h1>
+          <p class="text-sm text-gray-500">
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+        </div>
+
+        <!-- features section -->
+        <div class="grid grid-cols-3 gap-3 text-center">
+          <div
+            id="add-money-feature"
+            class="bg-gray-100 flex flex-col justify-center items-center p-5 rounded-lg border border-gray-300 space-y-2 cursor-pointer"
+          >
+            <img src="../assets/wallet.png" alt="" />
+            <p class="text-sm text-gray-500">Add Money</p>
+          </div>
+          <!-- cashout -->
+          <div
+            id="cashout-feature"
+            class="bg-gray-100 flex flex-col justify-center items-center p-5 rounded-lg border border-gray-300 space-y-2 cursor-pointer"
+          >
+            <img src="../assets/send.png" alt="" />
+            <p class="text-sm text-gray-500">Cashout</p>
+          </div>
+          <!-- transfer money -->
+          <div
+            id="transfer-money-feature"
+            class="bg-gray-100 flex flex-col justify-center items-center p-5 rounded-lg border border-gray-300 space-y-2 cursor-pointer"
+          >
+            <img src="../assets/money.png" alt="" />
+            <p class="text-sm text-gray-500 min-[420px]:whitespace-nowrap">
+              Transfer Money
+            </p>
+          </div>
+          <!-- get bonus -->
+          <div
+            id="bonus-feature"
+            class="bg-gray-100 flex flex-col justify-center items-center p-5 rounded-lg border border-gray-300 space-y-2 cursor-pointer"
+          >
+            <img src="../assets/financial.png" alt="" />
+            <p class="text-sm text-gray-500">Get Bonus</p>
+          </div>
+
+          <!-- pay bill -->
+          <div
+            id="paybill-feature"
+            class="bg-gray-100 flex flex-col justify-center items-center p-5 rounded-lg border border-gray-300 space-y-2 cursor-pointer"
+          >
+            <img src="../assets/purse.png" alt="" />
+            <p class="text-sm text-gray-500">Pay Bill</p>
+          </div>
+          <!-- transaction -->
+          <div
+            id="transaction-feature"
+            class="bg-gray-100 flex flex-col justify-center items-center p-5 rounded-lg border border-gray-300 space-y-2 cursor-pointer"
+          >
+            <img src="../assets/transaction.png" alt="" />
+            <p class="text-sm text-gray-500">Transaction</p>
+          </div>
+        </div>
+
+        <!-- latest payment section -->
+        <div id="latest-payment">
+          <!-- title -->
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="text-xl font-bold">Latest Payment</h3>
+            <div>
+              <a class="text-gray-400" href="#">View All</a>
+            </div>
+          </div>
+
+          <!-- payments section-->
+          <div class="space-y-3">
+            <!-- payment 1 -->
+            <div
+              class="bg-white rounded-lg border border-gray-300 flex justify-between items-center py-3 px-5"
+            >
+              <!-- left content -->
+              <div class="flex justify-between items-center gap-3">
+                <img
+                  class="p-3 bg-sky-100 rounded-full"
+                  src="../assets/wallet.png"
+                  alt=""
+                />
+                <div>
+                  <h4 class="font-bold text-gray-600 mb-1">Electricity</h4>
+                  <p class="text-xs text-gray-500">Today 01:44 AM</p>
+                </div>
+              </div>
+              <div>
+                <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
+              </div>
+            </div>
+            <!-- payment 2 -->
+            <div
+              class="bg-white rounded-lg border border-gray-300 flex justify-between items-center py-3 px-5"
+            >
+              <!-- left content -->
+              <div class="flex justify-between items-center gap-3">
+                <img
+                  class="p-3 bg-sky-100 rounded-full"
+                  src="../assets/wallet.png"
+                  alt=""
+                />
+                <div>
+                  <h4 class="font-bold text-gray-600 mb-1">Bank Deposit</h4>
+                  <p class="text-xs text-gray-500">Today 01:44 AM</p>
+                </div>
+              </div>
+              <div>
+                <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
+              </div>
+            </div>
+            <!-- payment 3-->
+            <div
+              class="bg-white rounded-lg border border-gray-300 flex justify-between items-center py-3 px-5"
+            >
+              <!-- left content -->
+              <div class="flex justify-between items-center gap-3">
+                <img
+                  class="p-3 bg-sky-100 rounded-full"
+                  src="../assets/wallet.png"
+                  alt=""
+                />
+                <div>
+                  <h4 class="font-bold text-gray-600 mb-1">Mobile Recharge</h4>
+                  <p class="text-xs text-gray-500">Today 01:44 AM</p>
+                </div>
+              </div>
+              <div>
+                <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
+              </div>
+            </div>
+
+            <!-- payment 4 -->
+            <div
+              class="bg-white rounded-lg border border-gray-300 flex justify-between items-center py-3 px-5"
+            >
+              <!-- left content -->
+              <div class="flex justify-between items-center gap-3">
+                <img
+                  class="p-3 bg-sky-100 rounded-full"
+                  src="../assets/wallet.png"
+                  alt=""
+                />
+                <div>
+                  <h4 class="font-bold text-gray-600 mb-1">Gas Bill</h4>
+                  <p class="text-xs text-gray-500">Today 01:44 AM</p>
+                </div>
+              </div>
+              <div>
+                <i class="fa-solid fa-ellipsis-vertical text-xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- add money section -->
+        <div id="addMoney-container" class="py-7 px-5 space-y-8">
+          <h2 class="text-xl font-semibold text-gray-800 mb-1">Add Money</h2>
+
+          <div class="hero block">
+            <div
+              class="hero-content min-w-md max-w-md flex-col lg:flex-row-reverse"
+            >
+              <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+                <form class="card-body space-y-1">
+                  <label
+                    for="bank-via"
+                    class="fieldset-label text-black text-lg"
+                    >Select A Bank</label
+                  >
+                  <select
+                    class="p-2 text-lg border-gray-300 rounded-sm"
+                    name=""
+                    id="bank-via"
+                  >
+                    <option disabled selected>Select bank</option>
+                    <option value="bkash">bkash</option>
+                    <option value="nagad">nagad</option>
+                    <option value="upai">upai</option>
+                    <option value="rocket">rocket</option>
+                  </select>
+                  <fieldset class="fieldset space-y-1">
+                    <label class="fieldset-label text-black text-lg"
+                      >Account Number</label
+                    >
+                    <input
+                      type="text"
+                      id="account-number"
+                      class="input text-base w-full"
+                      placeholder="Enter 11 digit number"
+                      required
+                    />
+                    <label class="fieldset-label text-black text-lg"
+                      >Amount To Add</label
+                    >
+                    <input
+                      type="text"
+                      id="amount"
+                      class="input text-base w-full"
+                      placeholder="Add amount to withdraw"
+                      required
+                    />
+                    <label class="fieldset-label text-black text-lg"
+                      >4 Digit PIN</label
+                    >
+                    <input
+                      type="text"
+                      id="pin-number"
+                      class="input text-base w-full"
+                      placeholder="Enter 4 Digit PIN"
+                      required
+                    />
+
+                    <button
+                      type="submit"
+                      id="add-money"
+                      class="btn border-none bg-blue-500 btn-neutral mt-4 text-lg"
+                    >
+                      Add Money
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- cashout section -->
+        <div id="cashout-container" class="py-7 px-5 space-y-8">
+          <h2 class="text-xl font-semibold text-gray-800 mb-1">Cashout</h2>
+
+          <div class="hero block">
+            <div
+              class="hero-content min-w-md max-w-md flex-col lg:flex-row-reverse"
+            >
+              <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+                <form class="card-body space-y-1">
+                  <fieldset class="fieldset space-y-1">
+                    <label class="fieldset-label text-black text-lg"
+                      >Account Number</label
+                    >
+                    <input
+                      type="text"
+                      id="cashout-number"
+                      class="input text-base w-full"
+                      placeholder="Enter 11 digit number"
+                      required
+                    />
+                    <label class="fieldset-label text-black text-lg"
+                      >Amount To Cashout</label
+                    >
+                    <input
+                      type="text"
+                      id="cashout-amount"
+                      class="input text-base w-full"
+                      placeholder="Enter amount to withdraw"
+                      required
+                    />
+                    <label class="fieldset-label text-black text-lg"
+                      >4 Digit PIN</label
+                    >
+                    <input
+                      type="text"
+                      id="cashout-pin"
+                      class="input text-base w-full"
+                      placeholder="Enter 4 Digit PIN"
+                      required
+                    />
+
+                    <button
+                      type="submit"
+                      id="cashout"
+                      class="btn border-none bg-blue-500 btn-neutral mt-4 text-lg"
+                    >
+                      Cashout
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../scripts/logout.js"></script>
+    <script src="../utilities/utility-function.js"></script>
+    <script src="../scripts/toggle.js"></script>
+    <script src="../scripts/add-money.js"></script>
+    <script src="../scripts/cashout.js"></script>
+  </body>
+</html>
