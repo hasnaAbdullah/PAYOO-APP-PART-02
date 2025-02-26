@@ -5,7 +5,10 @@ loginBtn.addEventListener("click", function (event) {
   const pin = getInputValueById("pin-number");
   if (account.length === 11) {
     if (pin === 1234) {
-      window.location.href = "/PAYOO-APP-PART-02/src/home.html";
+      const repoName = window.location.hostname.includes("github.io")
+        ? "/PAYOO-APP-PART-02"
+        : "";
+      window.location.href = repoName + "/src/home.html";
     } else {
       alert("wrong pin number");
     }
