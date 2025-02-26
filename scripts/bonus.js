@@ -7,7 +7,6 @@ bonusBtn.addEventListener("click", function (event) {
 
   if (bonus) {
     const bonusMoney = balance * (bonus / 100);
-    console.log(bonusMoney);
     const newBalance = balance + bonusMoney;
     mainBalance.innerText = newBalance;
   } else {
