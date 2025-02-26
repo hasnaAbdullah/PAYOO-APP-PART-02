@@ -11,12 +11,14 @@ transferSection.style.display = "none";
 addMoneyFeature.addEventListener("click", function () {
   toggleHandler("latest-payment", "none");
   toggleHandler("cashout-container", "none", "cashout-feature", false);
+  toggleHandler("transfer-container", "none", "transfer-money-feature", false);
   toggleHandler("addMoney-container", "block", "add-money-feature", true);
 });
 
 cashoutFeature.addEventListener("click", function () {
   toggleHandler("latest-payment", "none");
   toggleHandler("addMoney-container", "none", "add-money-feature", false);
+  toggleHandler("transfer-container", "none", "transfer-money-feature", false);
   toggleHandler("cashout-container", "block", "cashout-feature", true);
 });
 
