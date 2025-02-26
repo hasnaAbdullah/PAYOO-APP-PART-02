@@ -347,6 +347,63 @@
             </div>
           </div>
         </div>
+        <!-- transfer money section -->
+        <div id="transfer-container" class="py-7 px-5 space-y-8">
+          <h2 class="text-xl font-semibold text-gray-800 mb-1">
+            Transfer Money
+          </h2>
+
+          <div class="hero block">
+            <div
+              class="hero-content min-w-md max-w-md flex-col lg:flex-row-reverse"
+            >
+              <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+                <form class="card-body space-y-1">
+                  <fieldset class="fieldset space-y-1">
+                    <label class="fieldset-label text-black text-lg"
+                      >Account Number</label
+                    >
+                    <input
+                      type="text"
+                      id="transfer-number"
+                      class="input text-base w-full"
+                      placeholder="Enter 11 digit number"
+                      required
+                    />
+                    <label class="fieldset-label text-black text-lg"
+                      >Amount To Cashout</label
+                    >
+                    <input
+                      type="text"
+                      id="transfer-amount"
+                      class="input text-base w-full"
+                      placeholder="Enter amount to withdraw"
+                      required
+                    />
+                    <label class="fieldset-label text-black text-lg"
+                      >4 Digit PIN</label
+                    >
+                    <input
+                      type="text"
+                      id="transfer-pin"
+                      class="input text-base w-full"
+                      placeholder="Enter 4 Digit PIN"
+                      required
+                    />
+
+                    <button
+                      type="submit"
+                      id="transfer"
+                      class="btn border-none bg-blue-500 btn-neutral mt-4 text-lg"
+                    >
+                      Transfer Money
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <script src="../scripts/logout.js"></script>
@@ -354,5 +411,6 @@
     <script src="../scripts/toggle.js"></script>
     <script src="../scripts/add-money.js"></script>
     <script src="../scripts/cashout.js"></script>
+    <script src="../scripts/transfer-money.js"></script>
   </body>
 </html>
