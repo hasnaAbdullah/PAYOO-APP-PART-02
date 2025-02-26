@@ -108,7 +108,7 @@
 
           <!-- pay bill -->
           <div
-            id="paybill-feature"
+            id="bill-feature"
             class="bg-gray-100 flex flex-col justify-center items-center p-5 rounded-lg border border-gray-300 space-y-2 cursor-pointer"
           >
             <img src="../assets/purse.png" alt="" />
@@ -405,7 +405,7 @@
           </div>
         </div>
 
-        <!-- transfer money section -->
+        <!-- bonus section -->
         <div id="bonus-container" class="py-7 px-5 space-y-8">
           <h2 class="text-xl font-semibold text-gray-800 mb-1">Get Bonus</h2>
 
@@ -439,6 +439,77 @@
             </div>
           </div>
         </div>
+
+        <!-- pay bill section -->
+        <div id="bill-container" class="py-7 px-5 space-y-8">
+          <h2 class="text-xl font-semibold text-gray-800 mb-1">Pay Bill</h2>
+          <div class="hero block">
+            <div
+              class="hero-content min-w-md max-w-md flex-col lg:flex-row-reverse"
+            >
+              <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+                <form class="card-body space-y-1">
+                  <label
+                    for="bank-via"
+                    class="fieldset-label text-black text-lg"
+                    >Select To Pay</label
+                  >
+                  <select
+                    class="p-2 text-lg border-gray-300 rounded-sm"
+                    name=""
+                    id="bill-bank"
+                  >
+                    <option disabled selected>Select bank</option>
+                    <option value="bkash">bkash</option>
+                    <option value="nagad">nagad</option>
+                    <option value="upai">upai</option>
+                    <option value="rocket">rocket</option>
+                  </select>
+                  <fieldset class="fieldset space-y-1">
+                    <label class="fieldset-label text-black text-lg"
+                      >Biller Account Number</label
+                    >
+                    <input
+                      type="text"
+                      id="bill-account-number"
+                      class="input text-base w-full"
+                      placeholder="Enter 11 digit account number"
+                      required
+                    />
+                    <label class="fieldset-label text-black text-lg"
+                      >Amount To Pay
+                    </label>
+                    <input
+                      type="text"
+                      id="bill-amount"
+                      class="input text-base w-full"
+                      placeholder="Add amount to pay"
+                      required
+                    />
+                    <label class="fieldset-label text-black text-lg"
+                      >4 Digit PIN</label
+                    >
+                    <input
+                      type="text"
+                      id="bill-pin"
+                      class="input text-base w-full"
+                      placeholder="Enter 4 Digit PIN"
+                      required
+                    />
+
+                    <button
+                      type="submit"
+                      id="pay-bill"
+                      class="btn border-none bg-blue-500 btn-neutral mt-4 text-lg"
+                    >
+                      Pay Bill
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <script src="../scripts/logout.js"></script>
@@ -448,5 +519,6 @@
     <script src="../scripts/cashout.js"></script>
     <script src="../scripts/transfer-money.js"></script>
     <script src="../scripts/bonus.js"></script>
+    <script src="../scripts/paybill.js"></script>
   </body>
 </html>
