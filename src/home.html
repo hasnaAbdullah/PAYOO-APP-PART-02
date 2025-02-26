@@ -404,6 +404,41 @@
             </div>
           </div>
         </div>
+
+        <!-- transfer money section -->
+        <div id="bonus-container" class="py-7 px-5 space-y-8">
+          <h2 class="text-xl font-semibold text-gray-800 mb-1">Get Bonus</h2>
+
+          <div class="hero block">
+            <div
+              class="hero-content min-w-md max-w-md flex-col lg:flex-row-reverse"
+            >
+              <div class="card bg-base-100 w-full shrink-0 shadow-2xl">
+                <form class="card-body space-y-1">
+                  <fieldset class="fieldset space-y-1">
+                    <label class="fieldset-label text-black text-lg"
+                      >Get Bonus Cupon</label
+                    >
+                    <input
+                      type="text"
+                      id="bonus-cupon"
+                      class="input text-base w-full"
+                      placeholder="Enter your cupon"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      id="bonus"
+                      class="btn border-none bg-blue-500 btn-neutral mt-4 text-lg"
+                    >
+                      Transfer Money
+                    </button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <script src="../scripts/logout.js"></script>
@@ -412,5 +447,6 @@
     <script src="../scripts/add-money.js"></script>
     <script src="../scripts/cashout.js"></script>
     <script src="../scripts/transfer-money.js"></script>
+    <script src="../scripts/bonus.js"></script>
   </body>
 </html>
