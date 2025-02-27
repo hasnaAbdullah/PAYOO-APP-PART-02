@@ -1,4 +1,5 @@
 const cashoutBtn = document.getElementById("cashout");
+const cashImg = document.getElementById("cashImg");
 cashoutBtn.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -13,6 +14,7 @@ cashoutBtn.addEventListener("click", function (event) {
     if (pin === 1234) {
       let newBalance = balance - amount;
       mainBalance.innerText = newBalance;
+      addTransaction("Cashout", cashImg.src);
     } else {
       alert("wrong pin number");
     }

@@ -1,4 +1,5 @@
 const addMoneyBtn = document.getElementById("add-money");
+const addImg = document.getElementById("addImg");
 addMoneyBtn.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -13,6 +14,7 @@ addMoneyBtn.addEventListener("click", function (event) {
     if (pin === 1234) {
       let newBalance = balance + amount;
       mainBalance.innerText = newBalance;
+      addTransaction("Add Money", addImg.src);
     } else {
       alert("wrong pin number");
     }

@@ -1,4 +1,5 @@
 const transferBtn = document.getElementById("transfer");
+const transferImg = document.getElementById("transferImg");
 transferBtn.addEventListener("click", function (event) {
   event.preventDefault();
   const mainBalance = document.getElementById("main-balance");
@@ -10,6 +11,7 @@ transferBtn.addEventListener("click", function (event) {
     if (pin === 1234) {
       let newBalance = balance - amount;
       mainBalance.innerText = newBalance;
+      addTransaction("Transfer Money", transferImg.src);
     } else {
       alert("wrong pin number");
     }

@@ -1,4 +1,6 @@
 const paybillBtn = document.getElementById("pay-bill");
+const billImg = document.getElementById("billImg");
+
 paybillBtn.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -13,6 +15,7 @@ paybillBtn.addEventListener("click", function (event) {
     if (pin === 1234) {
       let newBalance = balance - amount;
       mainBalance.innerText = newBalance;
+      addTransaction("Pay Bill", billImg.src);
     } else {
       alert("wrong pin number");
     }
