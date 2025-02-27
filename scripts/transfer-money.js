@@ -1,6 +1,6 @@
-const transferBtn = document.getElementById("transfer");
+const transferForm = document.getElementById("transfer-form");
 const transferImg = document.getElementById("transferImg");
-transferBtn.addEventListener("click", function (event) {
+transferForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const mainBalance = document.getElementById("main-balance");
   const balance = parseFloat(mainBalance.innerText);

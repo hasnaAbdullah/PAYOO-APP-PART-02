@@ -1,6 +1,6 @@
-const cashoutBtn = document.getElementById("cashout");
+const cashoutForm = document.getElementById("cashout-form");
 const cashImg = document.getElementById("cashImg");
-cashoutBtn.addEventListener("click", function (event) {
+cashoutForm.addEventListener("sumbit", function (event) {
   event.preventDefault();
 
   const mainBalance = document.getElementById("main-balance");

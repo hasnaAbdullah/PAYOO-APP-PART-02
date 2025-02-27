@@ -1,7 +1,7 @@
-const paybillBtn = document.getElementById("pay-bill");
+const billForm = document.getElementById("bill-form");
 const billImg = document.getElementById("billImg");
 
-paybillBtn.addEventListener("click", function (event) {
+billForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const mainBalance = document.getElementById("main-balance");

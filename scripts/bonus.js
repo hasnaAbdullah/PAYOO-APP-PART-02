@@ -1,6 +1,6 @@
-const bonusBtn = document.getElementById("bonus");
+const bonusForm = document.getElementById("bonus-form");
 const bonusImg = document.getElementById("bonusImg");
-bonusBtn.addEventListener("click", function (event) {
+bonusForm.addEventListener("submit", function (event) {
   event.preventDefault();
   const mainBalance = document.getElementById("main-balance");
   const balance = parseFloat(mainBalance.innerText);
